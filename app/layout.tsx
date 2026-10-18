@@ -50,6 +50,12 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body
         className={`${sora.variable} font-sora page bg-site text-white bg-cover bg-no-repeat relative`}
+        style={{
+          ["--background-image-explosion" as any]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bg-explosion.png)`,
+          ["--background-image-circles" as any]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bg-circles.png)`,
+          ["--background-image-circle-star" as any]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ""}/circle-star.svg)`,
+          ["--background-image-site" as any]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ""}/site-bg.svg)`,
+        }}
       >
         <TopLeftImg />
         <Nav />

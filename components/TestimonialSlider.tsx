@@ -50,7 +50,7 @@ const TestimonialSlider = () => {
               <div className="flex flex-col justify-center text-center">
                 <div className="mb-2 mx-auto">
                   <Image
-                    src={person.image}
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${person.image}`}
                     width={100}
                     height={100}
                     alt={person.name}

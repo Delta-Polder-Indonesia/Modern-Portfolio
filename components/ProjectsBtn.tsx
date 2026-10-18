@@ -11,7 +11,7 @@ const ProjectsBtn = () => {
         className="relative w-46.25 h-46.25 flex justify-center items-center bg-circle-star bg-cover bg-center bg-no-repeat group"
       >
         <Image
-          src="/rounded-text.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/rounded-text.png`}
           alt="rounded text"
           width={141}
           height={148}

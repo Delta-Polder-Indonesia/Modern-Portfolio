@@ -37,7 +37,7 @@ export const socialData: { name: string; link: string; Icon: IconType }[] = [
   },
   {
     name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
+    link: "https://github.com/Delta-Polder-Indonesia/Modern-Portfolio",
     Icon: RiGithubLine,
   },
 ];

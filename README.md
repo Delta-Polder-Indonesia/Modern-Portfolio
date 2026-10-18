@@ -4,7 +4,7 @@
 
 ![Modern Portfolio using Next.js and Framer Motion](/.github/images/img_main.png "Modern Portfolio using Next.js and Framer Motion")
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
+[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia "Ask Me Anything!")
 [![GitHub license](https://flat.badgen.net/github/license/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/blob/main/LICENSE "GitHub license")
 [![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/commits/main "Maintenance")
 [![GitHub branches](https://flat.badgen.net/github/branches/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/branches "GitHub branches")
@@ -206,8 +206,7 @@ Useful resources and dependencies that are used in Modern Portfolio.
 
 ## Follow Me
 
-[![GitHub followers](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fx.com%2F_sanidhyy)](https://x.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%2Fmodern-portfolio "Tweet")
+[![GitHub followers](https://img.shields.io/github/followers/Delta-Polder-Indonesia?style=social&label=Follow&maxAge=2592000)](https://github.com/Delta-Polder-Indonesia "Follow Me")
 
 ## Learn More
 

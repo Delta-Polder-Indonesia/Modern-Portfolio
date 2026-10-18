@@ -5,12 +5,13 @@
 ![Modern Portfolio using Next.js and Framer Motion](/.github/images/img_main.png "Modern Portfolio using Next.js and Framer Motion")
 
 [![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/commits "Github commits")
+[![GitHub license](https://flat.badgen.net/github/license/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/blob/main/LICENSE "GitHub license")
+[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/commits/main "Maintenance")
+[![GitHub branches](https://flat.badgen.net/github/branches/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/branches "GitHub branches")
+[![Github commits](https://flat.badgen.net/github/commits/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/commits "Github commits")
 [![Netlify Status](https://api.netlify.com/api/v1/badges/721491f5-0b0d-4120-96bd-6bd0480ef1e5/deploy-status)](https://awersome-portfolio.netlify.app/ "Netlify Status")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/issues "GitHub issues")
+[![GitHub issues](https://flat.badgen.net/github/issues/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/issues "GitHub issues")
+[![GitHub pull requests](https://flat.badgen.net/github/prs/Delta-Polder-Indonesia/Modern-Portfolio?icon=github&color=black&scale=1.01)](https://github.com/Delta-Polder-Indonesia/Modern-Portfolio/pulls "GitHub pull requests")
 
 <!-- Table of Contents -->
 <details>

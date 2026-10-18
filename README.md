@@ -46,8 +46,8 @@ Here is the folder structure of this app.
 ```bash
 modern-portfolio/
   |- app/
+    |-- _api/
     |-- about/
-    |-- api/
     |-- contact/
     |-- services/
     |-- testimonials/

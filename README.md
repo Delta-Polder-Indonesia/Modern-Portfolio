@@ -29,7 +29,6 @@
 - [Stats](#stats)
 - [Contribute](#contribute)
 - [Acknowledgements](#acknowledgements)
-- [Buy Me a Coffee](#buy-me-a-coffee)
 - [Follow Me](#follow-me)
 - [Learn More](#learn-more)
 - [Deploy on Vercel](#deploy-on-vercel)
@@ -204,10 +203,6 @@ Useful resources and dependencies that are used in Modern Portfolio.
 - [typescript](https://www.npmjs.com/package/typescript): ^6.0.3
 
 <!--- DEPENDENCIES_END --->
-
-## Buy Me a Coffee
-
-[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/sanidhy "Buy me a Coffee")
 
 ## Follow Me
 

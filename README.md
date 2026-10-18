@@ -11,7 +11,6 @@
 [![Github commits](https://flat.badgen.net/github/commits/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/commits "Github commits")
 [![Netlify Status](https://api.netlify.com/api/v1/badges/721491f5-0b0d-4120-96bd-6bd0480ef1e5/deploy-status)](https://awersome-portfolio.netlify.app/ "Netlify Status")
 [![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/modern-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/modern-portfolio/pulls "GitHub pull requests")
 
 <!-- Table of Contents -->
 <details>
@@ -150,7 +149,6 @@ RECAPTCHA_MIN_SCORE="0.5"
 
 If you run into issues during installation or setup:
 
-- **GitHub Discussions** - [Open a Q&A discussion](https://github.com/sanidhyy/modern-portfolio/discussions/new?category=q-a) for setup and troubleshooting help.
 - **Email** - [sanidhyyy@gmail.com](mailto:sanidhyyy@gmail.com)
 - **Discord** - `@sanidhyy`
 
@@ -231,16 +229,6 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 ## Give A Star
 
 You can also give this repository a star to show more people and they can use this repository.
-
-## Star History
-
-<a href="https://star-history.com/#sanidhyy/modern-portfolio&Timeline">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanidhyy/modern-portfolio&type=Timeline&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanidhyy/modern-portfolio&type=Timeline" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanidhyy/modern-portfolio&type=Timeline" />
-</picture>
-</a>
 
 <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -6,12 +6,11 @@ export const fadeIn = (direction: FadeDirection, delay: number) => {
       y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
       opacity: 0,
       x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
-      // Exits are intentionally fast: the template waits for them before it
-      // renders the next page, so a slow exit makes navigation feel broken.
       transition: {
         type: "tween" as const,
-        duration: 0.35,
-        ease: "easeIn" as const,
+        duration: 1.5,
+        delay: delay,
+        ease: [0.25, 0.6, 0.3, 0.8] as const,
       },
     },
     show: {
@@ -20,7 +19,7 @@ export const fadeIn = (direction: FadeDirection, delay: number) => {
       opacity: 1,
       transition: {
         type: "tween" as const,
-        duration: 1.1,
+        duration: 1.4,
         delay: delay,
         ease: [0.25, 0.25, 0.25, 0.75] as const,
       },

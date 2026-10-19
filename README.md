@@ -46,15 +46,20 @@ Here is the folder structure of this app.
 ```bash
 modern-portfolio/
   |- app/
-    |-- _api/
     |-- about/
+    |-- api/
     |-- contact/
     |-- services/
     |-- testimonials/
     |-- work/
+    |-- error.tsx
     |-- globals.css
     |-- layout.tsx
+    |-- manifest.ts
+    |-- not-found.tsx
     |-- page.tsx
+    |-- robots.ts
+    |-- sitemap.ts
     |-- template.tsx
   |- components/
     |-- Avatar.tsx
@@ -71,6 +76,7 @@ modern-portfolio/
     |-- Transition.tsx
     |-- WorkSlider.tsx
   |- lib/
+    |-- assets.ts
     |-- contact.ts
   |- public/
   |- .env.example
@@ -179,6 +185,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Modern Portfolio.
 
 <!--- DEPENDENCIES_START --->
+- [@fontsource-variable/sora](https://www.npmjs.com/package/@fontsource-variable/sora): 5.3.0
 - [@tailwindcss/postcss](https://www.npmjs.com/package/@tailwindcss/postcss): ^4.3.3
 - [@tsparticles/engine](https://www.npmjs.com/package/@tsparticles/engine): ^4.4.0
 - [@tsparticles/react](https://www.npmjs.com/package/@tsparticles/react): ^4.4.0

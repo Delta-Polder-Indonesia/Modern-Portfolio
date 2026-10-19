@@ -23,27 +23,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'pnpm'
-
+          node-version: '20'
+      
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
+        run: npm install --legacy-peer-deps
+      
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-          NEXT_STATIC_EXPORT: '1'
-          NEXT_PUBLIC_STATIC_EXPORT: '1'
-          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
-        run: pnpm run build
+        run: npm run build
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

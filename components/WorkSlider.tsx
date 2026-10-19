@@ -7,57 +7,56 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-import { assetPath } from "@/lib/assets";
 
 const workSlides = {
   slides: [
     {
       images: [
         {
-          title: "Brand identity project",
+          title: "title",
           path: "/thumb1.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Web application project",
+          title: "title",
           path: "/thumb2.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Mobile experience project",
+          title: "title",
           path: "/thumb3.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Marketing website project",
+          title: "title",
           path: "/thumb4.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
       ],
     },
     {
       images: [
         {
-          title: "Marketing website project",
+          title: "title",
           path: "/thumb4.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Brand identity project",
+          title: "title",
           path: "/thumb1.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Web application project",
+          title: "title",
           path: "/thumb2.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
         {
-          title: "Mobile experience project",
+          title: "title",
           path: "/thumb3.jpg",
-          link: "https://example.com",
+          link: "http://example.com",
         },
       ],
     },
@@ -76,43 +75,43 @@ const WorkSlider = () => {
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
-            {slide.images.map((image) => (
-              <Link
-                key={image.path}
-                href={image.link}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="relative rounded-lg overflow-hidden flex items-center justify-center group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+            {slide.images.map((image, imageI) => (
+              <div
+                className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                key={imageI}
               >
-                <Image
-                  src={assetPath(image.path)}
-                  alt={`${image.title} — preview`}
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <div className="flex items-center justify-center relative overflow-hidden group">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${image.path}`}
+                    alt={image.title}
+                    width={500}
+                    height={300}
+                  />
 
-                <div
-                  className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent md:bg-linear-to-l md:from-transparent md:via-[#e838cc] md:to-[#4a22bd] md:opacity-0 md:group-hover:opacity-80 transition-all duration-700"
-                  aria-hidden
-                />
+                  <div
+                    className="absolute inset-0 bg-linear-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"
+                    aria-hidden
+                  />
 
-                <div
-                  className="absolute bottom-2 left-1/2 -translate-x-1/2 w-max max-w-[92%] md:bottom-0 md:left-auto md:translate-x-0 md:translate-y-full md:group-hover:-translate-y-10 md:group-hover:xl:-translate-y-20 transition-all duration-300"
-                  aria-hidden
-                >
-                  <span className="flex items-center justify-center gap-x-1.5 md:gap-x-2 text-[10px] sm:text-[13px] tracking-[0.12em] sm:tracking-[0.2em] whitespace-nowrap">
-                    <span className="delay-100">LIVE</span>
-                    <span className="md:translate-y-[500%] md:group-hover:translate-y-0 transition-all duration-300 delay-150">
-                      PROJECT
-                    </span>
-                    <span className="text-base sm:text-xl md:translate-y-[500%] md:group-hover:translate-y-0 transition-all duration-300 delay-150">
-                      <BsArrowRight />
-                    </span>
-                  </span>
+                  <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                    <Link
+                      href={image.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
+                    >
+                      <div className="delay-100">LIVE</div>
+                      <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                        PROJECT
+                      </div>
+                      <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                        <BsArrowRight aria-hidden />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </SwiperSlide>

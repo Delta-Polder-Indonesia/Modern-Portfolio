@@ -10,42 +10,25 @@
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1200px;
 
-  --background-image-circles: url("/circles.png");
+  --background-image-explosion: url("/bg-explosion.png");
+  --background-image-circles: url("/bg-circles.png");
   --background-image-circle-star: url("/circle-star.svg");
   --background-image-site: url("/site-bg.svg");
-  --background-image-explosion: url("/bg-explosion.png");
 
   --animate-spin-slow: spin 6s linear infinite;
 }
 
 @theme inline {
-  --font-sora: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sora: var(--font-sora-family), sans-serif;
 }
 
-/*
- * Tailwind v4 replaces the built-in `container` utility when it is
- * re-declared. Keep the centred, padded behaviour from the original design
- * and restore the max-widths that v3's `container.center` provided.
- */
 @utility container {
-  width: 100%;
   margin-inline: auto;
   padding-inline: 15px;
-  max-width: var(--breakpoint-sm);
-  @variant sm { max-width: var(--breakpoint-sm); }
-  @variant md { max-width: var(--breakpoint-md); }
-  @variant lg { max-width: var(--breakpoint-lg); }
-  @variant xl { max-width: var(--breakpoint-xl); }
 }
 
 .translate-z-0 {
   transform: translateZ(0px);
-}
-
-.swiper {
-  --swiper-navigation-color: #f13024;
-  --swiper-navigation-size: 28px;
-  --swiper-pagination-color: #f13024;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -60,33 +43,12 @@
   color: #f13024;
 }
 
-.testimonial-swiper .swiper-button-next,
-.testimonial-swiper .swiper-button-prev {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  background-color: rgb(255 255 255 / 0.06);
-  backdrop-filter: blur(4px);
-  transition: background-color 0.3s ease;
-}
-
-.testimonial-swiper .swiper-button-next:hover,
-.testimonial-swiper .swiper-button-prev:hover {
-  background-color: rgb(255 255 255 / 0.12);
-}
-
-.testimonial-swiper .swiper-button-next:after,
-.testimonial-swiper .swiper-button-prev:after {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
   }
   .page {
-    @apply w-full h-dvh overflow-x-clip overflow-y-auto;
+    @apply w-full h-screen overflow-hidden;
   }
   .h1 {
     @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;
@@ -110,30 +72,6 @@
   }
   .textarea {
     @apply w-full min-h-32 p-6 rounded-lg resize-none overflow-hidden max-h-60;
-  }
-}
-
-/* Keep content usable on short landscape screens (phones in landscape). */
-@media (max-height: 520px) and (orientation: landscape) {
-  .site-header-inner {
-    padding-block: 0.25rem;
-    gap: 0.25rem;
-    flex-direction: row;
-  }
-  .site-nav-inner {
-    height: 3.25rem;
-    padding-block: 0.25rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
   }
 }
 

@@ -10,10 +10,7 @@ import toast from "react-hot-toast";
 import { BsArrowRight } from "react-icons/bs";
 
 import {
-  CONTACT_EMAIL,
-  CONTACT_ENDPOINT,
   CONTACT_RECAPTCHA_ACTION,
-  IS_CONTACT_FORM_ENABLED,
   isValidContactEmail,
   isValidContactMessage,
   isValidContactName,
@@ -121,7 +118,7 @@ const ContactForm = () => {
     try {
       const recaptchaToken = await executeRecaptcha(CONTACT_RECAPTCHA_ACTION);
 
-      const response = await fetch(CONTACT_ENDPOINT, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -173,7 +170,8 @@ const ContactForm = () => {
       exit="hidden"
       className="flex-1 flex flex-col gap-6 w-full mx-auto"
       onSubmit={handleSubmit}
-      autoComplete="on"
+      autoComplete="off"
+      autoCapitalize="off"
       noValidate
     >
       <div className="flex gap-x-6 w-full">
@@ -182,7 +180,6 @@ const ContactForm = () => {
             type="text"
             name="name"
             placeholder="Name"
-            autoComplete="name"
             className="input"
             value={form.name}
             onChange={handleChange}
@@ -203,8 +200,6 @@ const ContactForm = () => {
             type="email"
             name="email"
             placeholder="E-mail"
-            autoComplete="email"
-            inputMode="email"
             className="input"
             value={form.email}
             onChange={handleChange}
@@ -226,7 +221,6 @@ const ContactForm = () => {
           type="text"
           name="subject"
           placeholder="Subject"
-          autoComplete="off"
           className="input"
           value={form.subject}
           onChange={handleChange}
@@ -265,7 +259,7 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="btn rounded-full border border-white/50 max-w-42.5 px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent group disabled:pointer-events-none disabled:opacity-60"
+        className="btn rounded-full border border-white/50 max-w-42.5 px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group disabled:pointer-events-none"
         disabled={isLoading}
         aria-disabled={isLoading}
       >
@@ -273,7 +267,7 @@ const ContactForm = () => {
           className={
             isLoading
               ? ""
-              : "group-hover:translate-y-[-120%] group-hover:opacity-0 group-focus-visible:translate-y-[-120%] group-focus-visible:opacity-0 transition-all duration-500"
+              : "group-hover:translate-y-[-120%] group-hover:opacity-0 transition-all duration-500"
           }
         >
           {isLoading ? "Sending..." : "Let's talk"}
@@ -281,7 +275,7 @@ const ContactForm = () => {
 
         {!isLoading && (
           <BsArrowRight
-            className="translate-y-[-120%] opacity-0 group-hover:flex group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 transition-all duration-300 absolute text-[22px]"
+            className="translate-y-[-120%] opacity-0 group-hover:flex group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
             aria-hidden
           />
         )}
@@ -293,35 +287,13 @@ const ContactForm = () => {
   );
 };
 
-const ContactFallback = () => (
-  <div className="mx-auto max-w-125 rounded-lg border border-white/15 bg-white/5 p-6 sm:p-8 text-center">
-    <p className="mb-4">
-      The contact form needs a server deployment. You can still reach me
-      directly by e-mail.
-    </p>
-    {CONTACT_EMAIL ? (
-      <a
-        href={`mailto:${CONTACT_EMAIL}`}
-        className="btn inline-flex h-13 items-center justify-center rounded-full border border-white/50 px-8 transition-colors duration-300 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-      >
-        {CONTACT_EMAIL}
-      </a>
-    ) : (
-      <p className="text-sm text-white/50">
-        Set <code>NEXT_PUBLIC_CONTACT_EMAIL</code> (or deploy with a server
-        runtime) to enable this section.
-      </p>
-    )}
-  </div>
-);
-
 const Contact = () => {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto pt-40 pb-28 xl:py-32 flex items-center justify-center min-h-full">
-        <div className="flex flex-col w-full max-w-175 mx-auto">
+    <div className="h-full bg-primary/30 overflow-y-auto">
+      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+        <div className="flex flex-col w-full max-w-175">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
@@ -332,12 +304,12 @@ const Contact = () => {
             Let&apos;s <span className="text-accent">connect.</span>
           </motion.h2>
 
-          {siteKey && IS_CONTACT_FORM_ENABLED ? (
+          {siteKey ? (
             <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
               <ContactForm />
             </GoogleReCaptchaProvider>
           ) : (
-            <ContactFallback />
+            <p className="text-center">Contact form is currently unavailable.</p>
           )}
         </div>
       </div>

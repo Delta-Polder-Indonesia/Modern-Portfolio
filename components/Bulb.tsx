@@ -1,22 +1,15 @@
 import Image from "next/image";
 
-import { assetPath } from "@/lib/assets";
-
 const Bulb = () => {
   return (
-    <div
-      className="hidden md:block fixed inset-0 z-10 overflow-hidden pointer-events-none select-none"
-      aria-hidden
-    >
-      <div className="absolute left-0 bottom-0 -translate-x-36 translate-y-12 rotate-12 mix-blend-color-dodge animate-pulse w-50 xl:w-65">
-        <Image
-          src={assetPath("/bulb.png")}
-          alt=""
-          width={260}
-          height={200}
-          className="w-full h-auto"
-        />
-      </div>
+    <div className="absolute -left-36 -bottom-12 rotate-12 mix-blend-color-dodge animate-pulse duration-75 z-10 w-50 xl:w-65 select-none pointer-events-none">
+      <Image
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bulb.png`}
+        alt="bulb"
+        width={260}
+        height={200}
+        className="w-full h-full"
+      />
     </div>
   );
 };

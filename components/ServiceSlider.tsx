@@ -9,15 +9,12 @@ import {
   RxArrowTopRight,
 } from "react-icons/rx";
 import type { IconType } from "react-icons";
-import Link from "next/link";
 import { FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-import { SHOULD_PREFETCH } from "@/lib/assets";
 
 const serviceData: {
   Icon: IconType;
@@ -73,11 +70,7 @@ const ServiceSlider = () => {
     >
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
-          <Link
-            href="/contact"
-            prefetch={SHOULD_PREFETCH}
-            className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
+          <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
             <div className="text-4xl text-accent mb-4">
               <item.Icon aria-hidden />
             </div>
@@ -93,7 +86,7 @@ const ServiceSlider = () => {
                 aria-hidden
               />
             </div>
-          </Link>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

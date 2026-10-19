@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
+import { assetPath } from "@/lib/assets";
+
 const workSlides = {
   slides: [
     {
@@ -83,7 +85,7 @@ const WorkSlider = () => {
               >
                 <div className="flex items-center justify-center relative overflow-hidden group">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${image.path}`}
+                    src={assetPath(image.path)}
                     alt={image.title}
                     width={500}
                     height={300}

@@ -19,7 +19,7 @@
 }
 
 @theme inline {
-  --font-sora: var(--font-sora-family), sans-serif;
+  --font-sora: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 @utility container {

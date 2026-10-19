@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
+
+import { assetPath } from "@/lib/assets";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -49,12 +51,12 @@ const TestimonialSlider = () => {
             <div className="w-full max-w-75 flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
               <div className="flex flex-col justify-center text-center">
                 <div className="mb-2 mx-auto">
-                  <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${person.image}`}
-                    width={100}
-                    height={100}
-                    alt={person.name}
-                  />
+                   <Image
+                     src={assetPath(person.image)}
+                     width={100}
+                     height={100}
+                     alt={person.name}
+                   />
                 </div>
 
                 <div className="text-lg">{person.name}</div>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 
+import { assetPath } from "@/lib/assets";
+
 const ProjectsBtn = () => {
   return (
     <div className="mx-auto xl:mx-0">
@@ -11,7 +13,7 @@ const ProjectsBtn = () => {
         className="relative w-46.25 h-46.25 flex justify-center items-center bg-circle-star bg-cover bg-center bg-no-repeat group"
       >
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/rounded-text.png`}
+          src={assetPath("/rounded-text.png")}
           alt="rounded text"
           width={141}
           height={148}

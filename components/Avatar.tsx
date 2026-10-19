@@ -1,10 +1,12 @@
 import Image from "next/image";
 
+import { assetPath } from "@/lib/assets";
+
 const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none pointer-events-none select-none">
       <Image
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/avatar.png`}
+        src={assetPath("/avatar.png")}
         alt="avatar"
         width={737}
         height={678}

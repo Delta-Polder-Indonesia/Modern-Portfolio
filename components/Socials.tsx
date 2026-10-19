@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { IconType } from "react-icons";
 import {
   RiYoutubeLine,
@@ -44,23 +43,23 @@ export const socialData: { name: string; link: string; Icon: IconType }[] = [
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
-      {socialData.map((social, i) => (
-        <Link
-          key={i}
+    <div className="flex items-center gap-x-1.5 sm:gap-x-3 text-lg">
+      {socialData.map((social) => (
+        <a
+          key={social.name}
           title={social.name}
           href={social.link}
           target="_blank"
           rel="noreferrer noopener"
           className={`${
             social.name === "Github"
-              ? "bg-accent rounded-full p-1.25 hover:text-white"
-              : "hover:text-accent"
-          } transition-all duration-300`}
+              ? "bg-accent rounded-full p-2 hover:bg-accent/80"
+              : "p-2 hover:text-accent"
+          } flex items-center justify-center size-10 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent`}
         >
           <social.Icon aria-hidden />
           <span className="sr-only">{social.name}</span>
-        </Link>
+        </a>
       ))}
     </div>
   );

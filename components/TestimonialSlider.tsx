@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { assetPath } from "@/lib/assets";
+
 const testimonialData = [
   {
     image: "/t-avt-1.png",
@@ -41,19 +43,20 @@ const TestimonialSlider = () => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-100"
+      className="h-100 testimonial-swiper"
     >
       {testimonialData.map((person, i) => (
         <SwiperSlide key={i}>
-          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
+          <div className="flex flex-col items-center md:flex-row gap-y-6 gap-x-8 h-full px-10 sm:px-14 md:px-16 pb-12">
             <div className="w-full max-w-75 flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
               <div className="flex flex-col justify-center text-center">
                 <div className="mb-2 mx-auto">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${person.image}`}
+                    src={assetPath(person.image)}
                     width={100}
                     height={100}
-                    alt={person.name}
+                    alt={`Portrait of ${person.name}`}
+                    className="rounded-full"
                   />
                 </div>
 
@@ -68,7 +71,7 @@ const TestimonialSlider = () => {
             <div className="flex-1 flex flex-col justify-center before:w-px xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-50 relative xl:pl-20">
               <div className="mb-4">
                 <FaQuoteLeft
-                  className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
+                  className="text-3xl xl:text-6xl text-white/20 mx-auto md:mx-0"
                   aria-hidden
                 />
               </div>

@@ -43,6 +43,7 @@ jobs:
           NEXT_STATIC_EXPORT: '1'
           NEXT_PUBLIC_STATIC_EXPORT: '1'
           NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ vars.RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' }}
         run: pnpm run build
       
       - name: Setup Pages

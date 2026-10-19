@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { SHOULD_PREFETCH } from "@/lib/assets";
 import type { IconType } from "react-icons";
 import {
   HiHome,
@@ -37,7 +39,7 @@ const Nav = () => {
       <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-20 xl:h-max py-8 bg-white/10 backdrop-blur-xs text-3xl xl:text-xl xl:rounded-full">
         {navData.map((link, i) => (
           <Link
-            prefetch
+            prefetch={SHOULD_PREFETCH}
             className={`${
               link.path === pathname && "text-accent"
             } relative flex items-center group hover:text-accent transition-all duration-300`}

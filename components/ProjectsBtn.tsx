@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
 
-import { assetPath } from "@/lib/assets";
+import { SHOULD_PREFETCH, assetPath } from "@/lib/assets";
 
 const ProjectsBtn = () => {
   return (
     <div className="mx-auto xl:mx-0">
       <Link
-        prefetch
+        prefetch={SHOULD_PREFETCH}
         href="/work"
         className="relative w-46.25 h-46.25 flex justify-center items-center bg-circle-star bg-cover bg-center bg-no-repeat group"
       >

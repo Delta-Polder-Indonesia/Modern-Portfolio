@@ -52,14 +52,9 @@ modern-portfolio/
     |-- services/
     |-- testimonials/
     |-- work/
-    |-- error.tsx
     |-- globals.css
     |-- layout.tsx
-    |-- manifest.ts
-    |-- not-found.tsx
     |-- page.tsx
-    |-- robots.ts
-    |-- sitemap.ts
     |-- template.tsx
   |- components/
     |-- Avatar.tsx
